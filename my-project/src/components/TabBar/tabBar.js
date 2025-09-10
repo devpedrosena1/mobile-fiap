@@ -7,8 +7,8 @@ const TabBar = ({setPage}) => {
                 <Text style={styles.buttonText}>Feed</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.button} onPress={() => setPage('Chat')}>
-                <Text style={styles.buttonText}>Chat</Text>
+            <TouchableOpacity style={styles.button} onPress={() => setPage('Sair')}>
+                <Text style={styles.buttonText}>Sair</Text>
             </TouchableOpacity>
         </View>
     );
