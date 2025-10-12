@@ -1,11 +1,13 @@
+import { useRouter } from 'expo-router';
 import { useState } from 'react';
-import { View, TextInput, Button, Text, StyleSheet } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
 
 export default function Home() {
 
     const [peso, setPeso] = useState('')
     const [altura, setAltura] = useState('')
     const [result, setResult] = useState('')
+    const router = useRouter()
 
     enum ImcType {
         calc
@@ -34,6 +36,7 @@ export default function Home() {
             <TextInput style = {styles.input} value={altura} placeholder='Insira a altura...' onChangeText={(text) => {setAltura(text)}}></TextInput>
             <Button title='Calcular' onPress={() => calcImc(ImcType.calc)}></Button>
             <Text style={styles.text}>{result}</Text>
+            <Button title='Page' onPress={() => router.push('./page')}></Button>
         </View>
     )
 }
